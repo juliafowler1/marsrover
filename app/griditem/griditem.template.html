@@ -1,1 +1,3 @@
-<p>{{ $ctrl.x }} {{$ctrl.currentX}} {{$ctrl.selected}}</p>
+<div class="squares" ng-click="$ctrl.handleClick()">
+    <img class="ufo" src="app/ufo.jpg" ng-if="$ctrl.roverHere()">
+</div>

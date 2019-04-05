@@ -4,5 +4,16 @@
 
 .grid-item {
     margin-right: 5px;
-    
+}
+
+.squares {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    margin-top: 10px;
+}
+
+.ufo {
+    width: 100px;
+    height: 100px;
 }
