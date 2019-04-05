@@ -3,6 +3,10 @@
     height: 500px;
     margin: auto;
 }
+.instructions {
+    display: flex;
+    justify-content: center;
+}
 .grid-container {
     display: flex;
 }
