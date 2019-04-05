@@ -1,22 +1,20 @@
 <div class="row">
-    <grid-item
-        class="col-sm-3" 
-        ng-repeat="coordinate in $ctrl.coordinates" 
-        x="coordinate.x" 
-        y="coordinate.y">
+    <grid-item class="col-sm-3" ng-repeat="coordinate in $ctrl.coordinates" x="coordinate.x" y="coordinate.y">
     </grid-item>
 </div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="bottom">
+            <!-- ng-change removes error message once user starts typing -->
+            <input ng-model="$ctrl.command" ng-change="$ctrl.errorMessage = ''">
+            <button class="submit" ng-click="$ctrl.submitCommand()">Submit</button></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="bottom">
+            <p>{{ $ctrl.errorMessage }}</p>
+        </div>
 
-<div class="row">
-    <div class="col-sm-12">
-        <input ng-model="$ctrl.command">
-        
-        <button ng-click="$ctrl.submitCommand()">Submit</button>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-12">
-        <p>{{ $ctrl.errorMessage }}</p>
-    </div>
-</div>
-<!-- use ng-class to show if rover has landed on specific coordinates -->

@@ -1,21 +1,22 @@
 const gridItem = {
-    templateUrl: "app/griditem/griditem.template.html",
-    controller: ["roverFactory", function(roverFactory){
-        const vm = this;
-        // sets current x,y on ng-click
-        vm.handleClick = function() {
-            roverFactory.setXY(vm.x, vm.y)
-        }
-        // checking if service x,y is equal to items x,y
-        vm.roverHere = function() {
-            return vm.x == roverFactory.currentX && vm.y == roverFactory.currentY;
-        }
-    }],
-    bindings: {
-        x: "<",
-        y: "<"
+  templateUrl: "app/griditem/griditem.template.html",
+  controller: [
+    "roverFactory",
+    function(roverFactory) {
+      const vm = this;
+
+      // comparing x, y values with currentX and currentY values, if true image is added to grid div
+      vm.roverHere = function() {
+        return vm.x == roverFactory.currentX && vm.y == roverFactory.currentY;
+      };
     }
+  ],
 
-}
+  // binding x and y from coordinates array in grid container
+  bindings: {
+    x: "<",
+    y: "<"
+  }
+};
 
-angular.module("app").component("gridItem", gridItem)
+angular.module("app").component("gridItem", gridItem);

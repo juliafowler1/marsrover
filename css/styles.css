@@ -1,19 +1,43 @@
+#app-container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
 .grid-container {
     display: flex;
 }
-
 .grid-item {
     margin-right: 5px;
 }
-
 .squares {
     width: 100px;
     height: 100px;
-    background-color: purple;
+    background-color: orangered;
     margin-top: 10px;
 }
-
 .ufo {
     width: 100px;
     height: 100px;
+}
+.bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.submit {
+    margin-left: 6px;
+    background-color: white;
+    border: solid 1px grey;
+    border-radius: 10px;
+}
+.submit:hover {
+background-color: lightslategray;
+color: white;
+}
+input {
+    border-radius: 10px;
+    border: solid 1px grey;
+}
+input:hover{
+    border: solid 1px greenyellow;
 }
